@@ -38,8 +38,8 @@ public class Controler {
         clients.add(client);
         return client;
     }
-
-
-
-
-}
+    @DeleteMapping("/delet/{id}")
+    public String DeleteOne(@PathVariable int id){
+        clients.remove(id-1);
+        return "le client qui a l'id :"+id+" est supprimé";
+    }}
